@@ -32,7 +32,7 @@ frontのコンテナ内に入っていること。(openContainer.shの3番を選
 
 ## 導入手順
 
-以下のコマンド順番にを実行してください。
+以下のコマンドを順番にを実行してください。
 
 ```
 cd app
@@ -183,10 +183,10 @@ npm i @popperjs/core
             ],
             "styles": [
               "src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.min.css" // 追加
+              "node_modules/bootstrap/dist/css/bootstrap.min.css" //追加
             ],
             "scripts": [
-              "node_modules/bootstrap/dist/js/bootstrap.js"  //追加
+              "node_modules/bootstrap/dist/js/bootstrap.min.js" // 追加
             ]
           },
           "configurations": {
@@ -261,5 +261,6 @@ npm i @popperjs/core
     }
   }
 }
+
 ```
 
