@@ -20,6 +20,17 @@ ng new app
 ng serve --host 0.0.0.0 --poll 1
 ```
 
+## 注意事項
+
+権限の問題でAngularのコマンドで作成したプロジェクトをローカル環境で編集できない場合がございます。
+
+その場合は、以下のコマンドで権限を変更してください。
+
+```
+sudo chmod -R 777 app
+```
+
+
 # Bootstrap5の導入方法
 
 Bootstrap5の導入方法について記載します。
@@ -264,3 +275,18 @@ npm i @popperjs/core
 
 ```
 
+## Bootstrapの動作確認
+
+app.component.htmlを編集して、以下を追加してください。
+
+```
+<p class="bg-dark text-light">Bootstrap 追加</p>
+```
+
+以下のコマンドで動作確認してください。
+
+```
+ng serve --host 0.0.0.0 --poll 1
+```
+
+背景が黒い"Bootstrap" 追加が表示されていたら成功です。
