@@ -8,7 +8,15 @@ Angularプロジェクトの作成方法について記載します。
 
 ## 導入手順
 
-以下のコマンドを実行して作成してください。
+以下のコマンドを順に実行して作成してください。
+
+```
+git config --global user.name 自身のGitのユーザ名
+```
+
+```
+git config --global user.email 自身のGitのメールアドレス
+```
 
 ```
 ng new app
@@ -19,6 +27,10 @@ ng new app
 ```
 ng serve --host 0.0.0.0 --poll 1
 ```
+
+以下へアクセスしてください。
+
+http://localhost:4200/
 
 ## 注意事項
 
@@ -288,5 +300,9 @@ app.component.htmlを編集して、以下を追加してください。
 ```
 ng serve --host 0.0.0.0 --poll 1
 ```
+
+以下へアクセスしてください。
+
+http://localhost:4200/
 
 背景が黒い"Bootstrap" 追加が表示されていたら成功です。
