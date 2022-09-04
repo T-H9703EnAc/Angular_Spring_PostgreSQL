@@ -305,4 +305,4 @@ ng serve --host 0.0.0.0 --poll 1
 
 http://localhost:4200/
 
-背景が黒い"Bootstrap" 追加が表示されていたら成功です。
+背景が黒い"Bootstrap 追加"が表示されていたら成功です。
