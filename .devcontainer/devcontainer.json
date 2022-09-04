@@ -1,0 +1,14 @@
+{
+    "name": "back",
+    "workspaceFolder": "/app",
+    "dockerComposeFile": "../docker-compose.yml",
+    "settings": {
+        "terminal.integrated.defaultProfile.linux": "/bin/bash",
+    },
+    "service": "back", //attachするコンテナはbackを指定
+    "extensions": [
+        "vscjava.vscode-java-pack", // JavaExtensionPack
+        "pivotal.vscode-boot-dev-pack", // Spring Boot Extension Pack
+        "gabrielbb.vscode-lombok" //Lombok Annotations Support For VS Code
+    ]
+}
