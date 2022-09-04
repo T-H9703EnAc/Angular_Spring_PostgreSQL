@@ -30,6 +30,6 @@ services:
     ports:
       - 4200:4200
     volumes:
-      - ./front/project:/app:cached
+      - ./front/app:/app:cached
     stdin_open: true
     tty: true
