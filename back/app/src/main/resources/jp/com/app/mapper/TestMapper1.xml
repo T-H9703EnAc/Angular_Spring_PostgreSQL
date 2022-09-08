@@ -3,7 +3,7 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="jp.com.app.mapper.TestMapper1">
-   <select id="selectUsers" parameterType="jp.com.app.entity.TestRequestEntity1" resultType="jp.com.app.entity.TestResponseEntity1">
+   <select id="selectUsers" parameterType="TestRequestEntity1" resultType="TestResponseEntity1">
       SELECT
          id,
          name
@@ -12,7 +12,7 @@
       WHERE 
          id = #{id}
    </select>
-   <insert id="insertUsers" parameterType="jp.com.app.entity.TestRequestEntity1">
+   <insert id="insertUsers" parameterType="TestRequestEntity1">
       INSERT INTO users
       (
          id, 
@@ -24,7 +24,7 @@
          #{name}
       )
    </insert>
-   <update id="updatetUsers" parameterType="jp.com.app.entity.TestRequestEntity1">
+   <update id="updatetUsers" parameterType="TestRequestEntity1">
       UPDATE
          users
       SET
@@ -32,7 +32,7 @@
       WHERE
          id = #{id}
    </update>
-   <delete id="deleteUsers" parameterType="jp.com.app.entity.TestRequestEntity1">
+   <delete id="deleteUsers" parameterType="TestRequestEntity1">
       DELETE
       FROM
          users
