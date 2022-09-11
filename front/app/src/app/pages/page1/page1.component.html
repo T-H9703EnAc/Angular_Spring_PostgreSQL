@@ -3,30 +3,34 @@
         <div class="row mt-3">
             <h1 class="text-center">検索画面</h1>
         </div>
-        <div class="row">
-            <div class="col-4">
-                <label class=""  for="name">名前：</label>
-                <input type="text" name="name" formControlName="name" />
-            </div>
-            <div class="col-4">
-                <label class=""  for="age">年齢：</label>
-                <input type="text" name="age" formControlName="age" />
-            </div>
-            <div class="col-4">
-                <label class=""  for="gender">性別</label>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="gender" id="gender-men" checked>
-                    <label class="form-check-label" for="gender-men">男</label>
+        <form>
+            <div class="row">
+                <div class="col-6">
+                    <label for="form-label" class="form-label">ID</label>
+                    <input type="text" class="form-control" id="form-label">
                 </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="gender" id="gender-women">
-                    <label class="form-check-label" for="gender-women">女</label>
+                <div class="col-6">
+                    <label for="form-label" class="form-label">名前</label>
+                    <input type="text" class="form-control" id="form-label">
                 </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="gender" id="gender-other">
-                    <label class="form-check-label" for="gender-other">その他</label>
-                </div>
-            </div>
-        </div>
+                <button class="btn btn-success btn-lg text-light mt-5" type="button" (click)="onSearch()">検索</button> 
+            </div>            
+        </form>
+        <table class="table table-bordered table-info mt-5">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">ID</th>
+                <th scope="col">名前</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let user of users">
+                <th scope="row">1</th>
+                <td>{{user.id}}</td>
+                <td>{{user.name}}</td>
+              </tr>
+            </tbody>
+          </table>
     </div>
 </main>

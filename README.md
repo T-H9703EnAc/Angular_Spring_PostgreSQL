@@ -306,3 +306,29 @@ ng serve --host 0.0.0.0 --poll 1
 http://localhost:4200/
 
 背景が黒い"Bootstrap 追加"が表示されていたら成功です。
+
+# Angular コマンド一覧
+
+アプリ起動
+
+```
+ng serve --host 0.0.0.0 --poll 1
+```
+
+コンポーネント作成
+
+```
+ng generate component "Component Name(複数系)"
+```
+
+```
+ng generate service "Service Name(単数系)"
+```
+
+```
+ng generate module "Module Name" --flat(ディレクトリを作らない) --module=app(ファイル名を指定)
+```
+
+```
+ng generate module app-routing --flat --module=app
+```

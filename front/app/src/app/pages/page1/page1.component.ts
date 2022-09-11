@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MockDataService } from 'src/app/mocks/mock-data.service';
+import { User } from './models/user.model';
 
 @Component({
   selector: 'app-page1',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Page1Component implements OnInit {
 
-  constructor() { }
+  users!: User[]
+
+  constructor(private mockDataService: MockDataService) { }
 
   ngOnInit(): void {
+  }
+
+  onSearch(){
+    this.users = this.mockDataService.getMockUsersData();
   }
 
 }
