@@ -1,1 +1,32 @@
-<p>page1 works!</p>
+<main>
+    <div class="container">
+        <div class="row mt-3">
+            <h1 class="text-center">検索画面</h1>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <label class=""  for="name">名前：</label>
+                <input type="text" name="name" formControlName="name" />
+            </div>
+            <div class="col-4">
+                <label class=""  for="age">年齢：</label>
+                <input type="text" name="age" formControlName="age" />
+            </div>
+            <div class="col-4">
+                <label class=""  for="gender">性別</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gender" id="gender-men" checked>
+                    <label class="form-check-label" for="gender-men">男</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gender" id="gender-women">
+                    <label class="form-check-label" for="gender-women">女</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gender" id="gender-other">
+                    <label class="form-check-label" for="gender-other">その他</label>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
