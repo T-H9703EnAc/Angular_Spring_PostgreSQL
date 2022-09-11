@@ -16,21 +16,6 @@
                 <button class="btn btn-success btn-lg text-light mt-5" type="button" (click)="onSearch()">検索</button> 
             </div>            
         </form>
-        <table class="table table-bordered table-info mt-5">
-            <thead>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">ID</th>
-                <th scope="col">名前</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr *ngFor="let user of users">
-                <th scope="row">1</th>
-                <td>{{user.id}}</td>
-                <td>{{user.name}}</td>
-              </tr>
-            </tbody>
-          </table>
+        <app-search-result [users]="users"></app-search-result>        
     </div>
 </main>
