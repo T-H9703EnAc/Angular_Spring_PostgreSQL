@@ -19,7 +19,7 @@ public interface TestService1 {
      */
     public void addUserData(TestRequestDto1 requestDto);
 
-        /**
+    /**
      * ユーザデータ更新
      * @param requestDto 更新ユーザ情報
      */
