@@ -1,1 +1,18 @@
-<p>login works!</p>
+<div class="container">
+    <h1 class="text-center mt-3">ログイン</h1>
+    <form [formGroup]="loginForm">
+        <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" formControlName="name">
+        </div>
+        <div class="mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="email" formControlName="email">
+        </div>
+        <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="password" formControlName="password">
+        </div>
+        <button class="btn btn-success btn-lg text-light mt-5" type="button" (click)="onSubmit()">ログイン</button>
+    </form>
+</div>

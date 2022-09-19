@@ -13,7 +13,7 @@ import jp.com.app.dto.TestResponseDto1;
 import jp.com.app.service.TestService1;
 
 @RestController
-@RequestMapping(value = "/api/get")
+@RequestMapping(value = "/get")
 public class TestController1 {
     @Autowired
     TestService1 service;
