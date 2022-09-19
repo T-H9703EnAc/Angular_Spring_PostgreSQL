@@ -42,6 +42,7 @@ export class LoginComponent implements OnInit {
 
     this.http.post(url,loginUser)
     .subscribe( res => {
+      console.log(res);
       if(res) {       
         // home画面へ遷移する
         this.router.navigate(['home']);
