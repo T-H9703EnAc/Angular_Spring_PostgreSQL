@@ -20,11 +20,14 @@ public class SpringSecurityConfig {
     @Bean
     public SecurityFilterChain web(HttpSecurity http) throws Exception {
         http.formLogin(login -> 
-            login.loginProcessingUrl("/api/login").permitAll()// ログインAPIへのアクセスを常に許可する
+            login.loginProcessingUrl("/login")
+            .usernameParameter("user")
+            .passwordParameter("password")
+            .permitAll()// ログインAPIへのアクセスを常に許可する
         ).logout(logout -> 
-            logout.logoutUrl("/api/logout").permitAll()// ログアウトをトリガーする 
+            logout.logoutUrl("/logout").permitAll()// ログアウトをトリガーする 
         ).authorizeRequests(authorize ->
-            authorize.mvcMatchers("/api/checkAuthorize").permitAll() // 認証確認APIへのアクセスは常にOK
+            authorize.mvcMatchers("/checkAuthorize").permitAll() // 認証確認APIへのアクセスは常にOK
             .anyRequest().authenticated() // ログイン/ログアウト以外のapiアクセスはログイン後のみ可能とする。
         );
         return http.build();
@@ -34,8 +37,8 @@ public class SpringSecurityConfig {
      * パスワードのHash化
      * @return
      */
-    @Bean
-    public PasswordEncoder passwordEncoder(){
-        return new BCryptPasswordEncoder();
-    } 
+    // @Bean
+    // public PasswordEncoder passwordEncoder(){
+    //     return new BCryptPasswordEncoder();
+    // } 
 }

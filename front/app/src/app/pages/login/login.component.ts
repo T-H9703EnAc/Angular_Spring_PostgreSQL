@@ -32,24 +32,28 @@ export class LoginComponent implements OnInit {
     // Formの値を取得する
     let loginUser: LoginUser = {
       name: String(this.loginForm.value["name"]),
-      emailAddress: String(this.loginForm.value["email"]),
+      email: String(this.loginForm.value["email"]),
       password: String(this.loginForm.value["password"])
     }
 
     console.log(loginUser);
 
-    let url = "/api/login";
+    let url = "api/login";
 
     this.http.post(url,loginUser)
-    .subscribe( res => {
-      console.log(res);
-      if(res) {       
-        // home画面へ遷移する
-        this.router.navigate(['home']);
-      }else{
-        alert("ログイン失敗");
+    .subscribe( 
+      {
+        next:(res => {
+          console.log(res);     
+          // home画面へ遷移する
+          this.router.navigate(['home']);
+          
+        }),
+        error:(error=>{
+          console.log(error);
+        })
       }
-    });
+    );
 
   }
 

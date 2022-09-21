@@ -298,7 +298,7 @@ app.component.htmlを編集して、以下を追加してください。
 以下のコマンドで動作確認してください。
 
 ```
-ng serve --host 0.0.0.0 --poll 1
+ng serve --host 0.0.0.0 --poll 1 --proxy-config=proxy.conf.json
 ```
 
 以下へアクセスしてください。
