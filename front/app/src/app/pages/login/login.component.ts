@@ -15,7 +15,7 @@ export class LoginComponent implements OnInit {
 
   // Formを監視
   loginForm = new FormGroup({
-    name: new FormControl(''),
+    user: new FormControl(''),
     email: new FormControl(''),
     password: new FormControl(''),
   });
@@ -31,25 +31,27 @@ export class LoginComponent implements OnInit {
   onSubmit(){
     // Formの値を取得する
     let loginUser: LoginUser = {
-      name: String(this.loginForm.value["name"]),
-      email: String(this.loginForm.value["email"]),
+      user: String(this.loginForm.value["user"]),
+      // email: String(this.loginForm.value["email"]),
       password: String(this.loginForm.value["password"])
     }
 
     console.log(loginUser);
 
-    let url = "api/login";
+    let url = "/api/login";
 
     this.http.post(url,loginUser)
     .subscribe( 
       {
         next:(res => {
+          console.log("成功")
           console.log(res);     
           // home画面へ遷移する
           this.router.navigate(['home']);
           
         }),
         error:(error=>{
+          console.log("Error")
           console.log(error);
         })
       }

@@ -1,7 +1,9 @@
 package jp.com.app.controller;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -10,9 +12,13 @@ import jp.com.app.dto.LoginResponseDto;
 
 @RestController
 public class LoginController {
+
+
     @PostMapping("/login")
-    @CrossOrigin(origins = {"http://localhost:4200"})
-    public ResponseEntity<LoginResponseDto> callGetUserData(LoginRequestDto requestDto){
+    public ResponseEntity<LoginResponseDto> callGetUserData(HttpServletRequest request, HttpServletResponse response, LoginRequestDto requestDto){
+        System.out.println("********************************************************************************");
+        System.out.println(request);
+        System.out.println("********************************************************************************");
         return ResponseEntity.ok(new LoginResponseDto(true,"成功"));
     }
 }
